@@ -17,7 +17,7 @@
 
   /* Font size */
   --font-large: 3rem;
-  --font-medium: 1.75rem;
+  --font-medium: 2rem;
   --font-regular: 1.125rem;
   --font-small: 1rem;
   --font-micro: 1.875rem;
@@ -26,11 +26,29 @@
   --weight-bold: 700;
   --weight-regular: 400;
   --weight-light: 100;
+
+  /* Size */
+  --size-border-radius: 4px;
 }
 
 /* Universal tags */
 * {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
 /* Typography */
@@ -51,7 +69,7 @@ h2 {
 
 h3 {
   font-size: var(--font-regular);
-  font-weight: var(--weight-light);
+  font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 0.5rem 0;
 }
@@ -61,4 +79,43 @@ p {
   font-weight: var(--weight-light);
   color: var(--color-black);
   margin: 4px 0;
+}
+
+/* Navbar */
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  color: var(--color-white);
+  padding: 1rem;
+}
+
+.navbar__menu {
+  display: flex;
+}
+
+.navbar__logo {
+  font-size: var(--font-medium);
+  font-weight: var(--weight-bold);
+  height: 2.25rem;
+}
+
+.navbar__logo img {
+  height: 2rem;
+}
+
+.navbar__menu__item {
+  padding: 0.5rem 0.875rem;
+  margin: 0 0.25rem;
+  cursor: pointer;
+  border-radius: var(--size-border-radius);
+}
+
+.navbar__menu__item.active {
+  border: 1px solid white;
+}
+
+.navbar__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
