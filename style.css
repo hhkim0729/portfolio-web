@@ -442,3 +442,29 @@ p {
   color: var(--color-blue);
   font-weight: var(--weight-regular);
 }
+
+/* Contact */
+#contact {
+  background-color: var(--color-blue);
+}
+
+.contact__title,
+.contact__email,
+.contact__right {
+  color: var(--color-white);
+}
+
+.contact__title {
+  margin: 2rem 0;
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 1.5rem 0;
+}
+
+.contact__links i:hover {
+  transform: scale(1.1);
+  color: var(--color-yellow);
+  transition: all 100ms ease-in;
+}
