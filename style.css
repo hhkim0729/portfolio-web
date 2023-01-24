@@ -47,8 +47,18 @@ a {
 }
 
 ul {
-  list-style-type: none;
   padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
 /* Typography */
@@ -118,4 +128,33 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+}
+
+/* Home */
+#home {
+  background: url('imgs/home-background.svg') center/cover no-repeat;
+  padding: 2rem;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid var(--color-white);
+  border-radius: 4px;
 }
