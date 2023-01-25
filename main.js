@@ -1,9 +1,12 @@
 'use strict';
 
-// Handle transparent navbar
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
+  const opacity = 1 - window.scrollY / homeHeight;
+  home.style.opacity = opacity;
   if (window.scrollY > navbarHeight) {
     navbar.classList.add('navbar--dark');
   } else {
