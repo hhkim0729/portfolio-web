@@ -42,7 +42,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 a {
@@ -68,8 +68,8 @@ button {
 /* Typography */
 
 h1 {
+  font-family: 'Leckerli One', cursive;
   font-size: var(--font-large);
-  font-weight: var(--weight-bold);
   color: var(--color-dark-grey);
   margin: 2rem 0;
 }
@@ -120,10 +120,13 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-bold);
+  font-family: 'Leckerli One', cursive;
+  color: var(--color-white);
+  text-shadow: -1px 0 var(--color-grey), 0 0.2rem var(--color-grey),
+    0.2rem 0 var(--color-grey), 0 -1px var(--color-grey);
 }
 
 .navbar__logo a {
-  color: var(--color-light-grey);
   display: flex;
   line-height: 2rem;
 }
@@ -177,6 +180,10 @@ p {
 .home__title,
 .home__description {
   color: var(--color-white);
+}
+
+.home__title {
+  text-shadow: var(--color-light-grey) 0.25rem 0.25rem;
 }
 
 .home__contact {
@@ -474,6 +481,7 @@ p {
 
 .contact__title {
   margin: 2rem 0;
+  text-shadow: var(--color-light-grey) 0.25rem 0.25rem;
 }
 
 .contact__links {
