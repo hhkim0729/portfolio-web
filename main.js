@@ -1,5 +1,6 @@
 'use strict';
 
+// Handle transparent navbar
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
