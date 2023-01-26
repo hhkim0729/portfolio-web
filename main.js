@@ -23,6 +23,7 @@ document.addEventListener('scroll', () => {
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (e) => {
   const target = e.target;
+  console.log(target);
   const link = target.dataset.link;
   if (link == null) {
     return;
@@ -52,12 +53,17 @@ const workBtnContainer = document.querySelector('.work__categories');
 const projectContainer = document.querySelector('.work__projects');
 const projects = document.querySelectorAll('.project');
 workBtnContainer.addEventListener('click', (e) => {
-  const target = e.target;
-  const category =
-    target.dataset.category || target.parentNode.dataset.category;
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  const category = target.dataset.category;
   if (category == null) {
     return;
   }
+
+  const selected = document.querySelector('.category__btn.selected');
+  selected.classList.remove('selected');
+  target.classList.add('selected');
+
   projectContainer.classList.add('anim-out');
   setTimeout(() => {
     projects.forEach((project) => {

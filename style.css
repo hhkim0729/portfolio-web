@@ -145,11 +145,6 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item.active {
-  text-decoration: underline 2px var(--color-pink);
-  text-underline-offset: 0.5rem;
-}
-
 .navbar__menu__item:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
@@ -340,13 +335,13 @@ p {
   padding: 0.5rem 3rem;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-green);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0;
