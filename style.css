@@ -417,7 +417,7 @@ p {
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-pink);
 }
 
 .project__description h3::after {
@@ -425,9 +425,9 @@ p {
   display: block;
   position: relative;
   left: 50%;
-  width: 2rem;
+  width: 3rem;
   height: 2px;
-  margin-left: -1rem;
+  transform: translateX(-50%);
   margin-top: 0.5rem;
   background-color: var(--color-dark-white);
 }
@@ -530,14 +530,27 @@ p {
   }
 
   #navbar {
+    position: relative;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-yellow);
+  }
+
+  #navbar.navbar--dark {
+    position: fixed;
+    padding: 1rem;
   }
 
   .navbar__menu {
     flex-direction: column;
     text-align: center;
     width: 100%;
+    display: none;
+    transition: all var(--animation-duration) ease;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
@@ -556,8 +569,21 @@ p {
     flex-grow: 1;
   }
 
+  .category__btn {
+    padding: 0.5rem 2rem;
+    margin-bottom: 1rem;
+  }
+
   .testimonial__avatar {
     width: 5rem;
     height: 5rem;
+  }
+
+  .testimonial__avatar:nth-child(odd) {
+    margin-right: 1rem;
+  }
+
+  .testimonial__avatar:nth-child(even) {
+    margin-left: 1rem;
   }
 }

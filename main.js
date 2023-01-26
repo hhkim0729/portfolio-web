@@ -28,7 +28,14 @@ navbarMenu.addEventListener('click', (e) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// Handle tapping on navbar hamburger button
+const hamburgerBtn = document.querySelector('.navbar__toggle-btn');
+hamburgerBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // Handle scrolling when tapping on "contact me" button on home
