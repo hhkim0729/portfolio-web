@@ -16,7 +16,7 @@ const home = document.querySelector('.home__container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
   const homeOpacity = 1 - window.scrollY / homeHeight;
-  home.style.opacity = homeOpacity;
+  home.style.opacity = homeOpacity * 2;
 });
 
 // Handle scrolling when tapping on the navbar menu
