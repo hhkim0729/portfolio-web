@@ -23,7 +23,6 @@ document.addEventListener('scroll', () => {
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (e) => {
   const target = e.target;
-  console.log(target);
   const link = target.dataset.link;
   if (link == null) {
     return;
@@ -83,6 +82,25 @@ workBtnContainer.addEventListener('click', (e) => {
     projectContainer.classList.remove('anim-out');
   }, 300);
 });
+
+// Handle interactive scrolling
+const options = {
+  threshold: 0.4,
+};
+const sections = document.querySelectorAll('.section');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const active = document.querySelector('.navbar__menu__item.active');
+      const navItem = document.querySelector(
+        `[data-link="#${entry.target.id}"]`
+      );
+      active.classList.remove('active');
+      navItem.classList.add('active');
+    }
+  });
+}, options);
+sections.forEach((section) => observer.observe(section));
 
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);

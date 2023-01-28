@@ -71,21 +71,21 @@ button {
 h1 {
   font-family: 'Leckerli One', cursive;
   font-size: var(--font-large);
-  color: var(--color-dark-grey);
+  color: var(--color-grey);
   margin: 2rem 0;
 }
 
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
-  color: var(--color-dark-grey);
+  color: var(--color-grey);
   margin: 0.5rem 0;
 }
 
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-dark-grey);
+  color: var(--color-grey);
   margin: 0.5rem 0;
 }
 
@@ -103,7 +103,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-light-grey);
+  color: var(--color-grey);
   padding: 1rem;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -146,9 +146,10 @@ p {
   border-radius: var(--size-border-radius);
 }
 
-.navbar__menu__item:hover {
-  background-color: var(--color-pink);
-  color: var(--color-white);
+.navbar__menu__item:hover,
+.navbar__menu__item.active {
+  text-decoration: underline var(--color-pink) 3px;
+  text-underline-offset: 0.5rem;
 }
 
 .navbar__toggle-btn {
@@ -167,10 +168,11 @@ p {
 }
 
 .home__avatar {
-  width: 250px;
-  height: 250px;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
   border: 2px solid var(--color-light-white);
+  margin-top: 4rem;
 }
 
 .home__title,
@@ -190,10 +192,11 @@ p {
   padding: 0.5rem 0.75rem;
   border: 2px solid var(--color-white);
   border-radius: 4px;
+  background-color: var(--color-pink);
 }
 
 .home__contact:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-pink);
 }
 
 /* Section common */
