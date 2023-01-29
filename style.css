@@ -43,6 +43,7 @@
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
+  color: var(--color-grey);
 }
 
 a {
@@ -71,21 +72,18 @@ button {
 h1 {
   font-family: 'Leckerli One', cursive;
   font-size: var(--font-large);
-  color: var(--color-grey);
   margin: 2rem 0;
 }
 
 h2 {
   font-size: var(--font-medium);
   font-weight: var(--weight-regular);
-  color: var(--color-grey);
   margin: 0.5rem 0;
 }
 
 h3 {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
-  color: var(--color-grey);
   margin: 0.5rem 0;
 }
 
@@ -103,7 +101,6 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: var(--color-grey);
   padding: 1rem;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1;
@@ -237,11 +234,6 @@ p {
 .major__icon:hover i {
   color: var(--color-pink);
   transform: rotate(-30deg) scale(1.1);
-}
-
-.major__title,
-.major__description {
-  color: var(--color-dark-grey);
 }
 
 .major__description {
